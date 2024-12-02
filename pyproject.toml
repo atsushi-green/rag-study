@@ -1,0 +1,32 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "atsushi", email = "green515tea@gmail.com" }
+]
+dependencies = [
+    "langchain-community==0.3.0",
+    "GitPython==3.1.43",
+    "langchain-openai==0.2.0",
+    "langchain-text-splitters>=0.3.2",
+    "unstructured>=0.16.8",
+    "pypdf>=5.1.0",
+    "langchain-chroma>=0.1.4",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rag"]

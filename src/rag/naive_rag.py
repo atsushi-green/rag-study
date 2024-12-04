@@ -4,9 +4,12 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import CharacterTextSplitter
 
 # ドキュメントの読み込み
-loader = PyPDFLoader("database/屋久島.pdf")
-pages = loader.load_and_split()
-raw_docs = loader.load()
+loader1 = PyPDFLoader("database/屋久島.pdf")
+loader2 = PyPDFLoader("database/小笠原諸島.pdf")
+raw_doc_yakushima = loader1.load()
+raw_doc_ogasawara = loader2.load()
+print(len(raw_doc_yakushima), len(raw_doc_ogasawara))
+raw_docs = raw_doc_yakushima + raw_doc_ogasawara
 print(len(raw_docs))
 
 # Document transformer（テキストデータの加工）
@@ -21,6 +24,7 @@ db = Chroma.from_documents(docs, embeddings)
 # 検索
 retriever = db.as_retriever()
 query = "屋久島は鹿児島県にありますか？"
+# query = "小笠原諸島は東京都にありますか？"
 
 context_docs = retriever.invoke(query)  # コサイン類似度で検索
 print(f"len = {len(context_docs)}")

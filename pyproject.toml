@@ -3,7 +3,7 @@ name = "rag"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
-    { name = "atsushi", email = "green515tea@gmail.com" }
+    { name = "redtea", email = "" }
 ]
 dependencies = [
     "langchain-community==0.3.0",
@@ -29,4 +29,4 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/rag"]
+packages = ["src"]

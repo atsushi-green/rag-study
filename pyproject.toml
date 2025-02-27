@@ -6,13 +6,19 @@ authors = [
     { name = "redtea", email = "" }
 ]
 dependencies = [
-    "langchain-community==0.3.0",
+    "langchain-community>=0.3.11",
     "GitPython==3.1.43",
     "langchain-openai==0.2.0",
     "langchain-text-splitters>=0.3.2",
     "unstructured>=0.16.8",
     "pypdf>=5.1.0",
     "langchain-chroma>=0.1.4",
+    "vertexai>=1.71.1",
+    "langchain_experimental>=0.3.3",
+    "neo4j>=5.27.0",
+    "yfiles_jupyter_graphs>=1.9.0",
+    "langchain-google-vertexai>=2.0.8",
+    "json-repair>=0.30.3",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

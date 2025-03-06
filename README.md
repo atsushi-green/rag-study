@@ -20,7 +20,7 @@ RAG用のデータは`database`ディレクトリに配置してください。�
 ## GraphRAG
 <div align="center">
   <br>
-  <img src="assets/graph.png" alt="Gaussian-distribution" height="150">
+  <img src="assets/graph.png" alt="Gaussian-distribution">
 </div>
 
 [blog](https://zenn.dev/zenkigen_tech/articles/0a25b2eaefb304)

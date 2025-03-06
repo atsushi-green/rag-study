@@ -11,3 +11,5 @@ wheels/
 .DS_Store
 *.pdf
 .env
+!種子島.pdf
+!屋久島.pdf
